@@ -113,10 +113,6 @@ class MainWindow(QMainWindow, Dashboard):
         self.refresh_file()
 
     def on_report_click(self, obj):
-        if self.md5 is None:
-            QMessageBox.critical(self, "오류", "선택된 신고가 없습니다")
-            return
-
         md5 = obj.text()
         if self.md5 != md5:
             self.md5 = md5
