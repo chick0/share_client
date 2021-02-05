@@ -38,7 +38,7 @@ class MainWindow(QMainWindow, Dashboard):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setWindowTitle("관리패널")
+        self.setWindowTitle("데이터베이스 관리도구")
 
         self.engine = create_engine(f"mysql://{conf['account']['user']}:{conf['account']['password']}"
                                     f"@{conf['database']['host']}/{conf['database']['database']}?charset=utf8")
